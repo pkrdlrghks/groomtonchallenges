@@ -1,0 +1,30 @@
+// Run by Node.js
+const readline = require('readline');
+
+(async () => {
+	let rl = readline.createInterface({ input: process.stdin });
+	
+	for await (const line of rl) {
+        let n=line;
+        let dandage=1;
+        let medicine=7;
+        let painkiller=14
+        let minItem=0;
+        if(!n<painkiller){
+            minItem+=Math.floor(n/painkiller);
+            n%=painkiller;
+        }
+        if(!n<medicine){
+            minItem+=Math.floor(n/medicine);
+            n%=medicine;
+        }
+        if(!n<dandage){
+            minItem+=Math.floor(n/dandage);
+            n%=dandage;
+        }
+        console.log(minItem);
+		rl.close();
+	}
+	
+	process.exit();
+})();
