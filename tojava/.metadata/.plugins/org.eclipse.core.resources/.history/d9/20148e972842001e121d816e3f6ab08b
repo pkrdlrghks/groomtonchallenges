@@ -1,6 +1,6 @@
 package groomton;
 
-public class PerfectBurger {
+public class Bomb {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
