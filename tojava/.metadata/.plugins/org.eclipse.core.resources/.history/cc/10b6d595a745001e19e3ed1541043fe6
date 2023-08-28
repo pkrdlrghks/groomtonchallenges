@@ -1,0 +1,33 @@
+package groomton;
+
+import java.util.Scanner;
+
+public class Pain2 {
+
+	public static void main(String[] args) throws Exception{
+		Scanner sc=new Scanner(System.in);
+		int n=Integer.parseInt(sc.nextLine());
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int countB=n/b;
+		int countA;
+		int remain=n-countB*b;
+		if(n>b) {
+			while (remain>0) {
+				if(remain%a == 0) {
+					countA= remain/a;
+					break;
+				}
+				countB--;
+				remain=n-countB*b;
+				if(countB<0) {
+					break;
+				}
+				
+			}
+		}
+		
+
+	}
+
+}
