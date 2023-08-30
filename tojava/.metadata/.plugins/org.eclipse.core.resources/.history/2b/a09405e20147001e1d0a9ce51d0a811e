@@ -1,0 +1,23 @@
+package groomton;
+
+import java.util.Scanner;
+
+public class Generator2 {
+
+	public static void main(String[] args) throws Exception{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int k=sc.nextInt();
+		sc.nextLine();
+		int[][] map=new int[n][n];
+		for(int r=0; r<n; r++) {
+			String[] rString=sc.nextLine().split(" ");
+			for(int c=0; c<n; c++) {
+				map[r][c]=Integer.parseInt(rString[c]);
+			}
+		}
+		
+
+	}
+
+}
