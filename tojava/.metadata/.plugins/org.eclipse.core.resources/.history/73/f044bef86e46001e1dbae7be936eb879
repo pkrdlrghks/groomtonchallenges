@@ -1,0 +1,46 @@
+package groomton;
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class Generator {
+	
+	public static void main(String[] args) throws Exception{
+		Scanner sc=new Scanner(System.in);
+		int n=Integer.parseInt(sc.nextLine());
+		int[][] m=new int[n][n];
+		for (int r = 0; r < n; r++) {
+			String[] rm = sc.nextLine().split(" ");
+			for(int c=0; c<n ; c++) {
+				m[r][c]=Integer.parseInt(rm[c]);
+			}
+		}
+		ArrayList<ArrayList<int[]>> connectionLine=new ArrayList<ArrayList<int[]>>();
+		for(int r=0; r<n; r++) {
+			ArrayList<int[]> pointList=new ArrayList<int[]>();
+			for(int c=0; c<n; c++) {
+				if(m[r][c]==1) {
+					int[] point= {r,c};
+					pointList.add(point);
+				}else if(!pointList.isEmpty()){
+					connectionLine.add(pointList);
+				}
+			}
+		}
+		for(int lineIndex=0; lineIndex<connectionLine.size()-1; lineIndex++) {
+			ArrayList<int[]> firstLine=new ArrayList<int[]>(connectionLine.indexOf(lineIndex));
+			ArrayList<int[]> secondLine=new ArrayList<int[]>(connectionLine.indexOf(lineIndex+1));
+			for(int firstPoint=0; firstPoint<firstLine.size(); firstPoint++) {
+				
+			}
+		}
+		
+	}
+		
+}
+
