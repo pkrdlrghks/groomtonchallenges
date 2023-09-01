@@ -32,27 +32,24 @@ public class Generator2 {
 						Queue<int[]> queue=new LinkedList<int[]>();
 						int counter=0;
 						queue.add(new int[] {r,c});
-						map[r][c]=0;
 						while (!queue.isEmpty()) {
 							int[] rc= queue.poll();
 							int mr=rc[0];
 							int mc=rc[1];
+							map[mr][mc]=0;
 							for(int d=0; d<4; d++) {
 								int mrd=rc[0]+rd[d];
 								int mcd=rc[1]+cd[d];
-								if(mrd>=0&mrd<n&mcd>=0&mcd<n) {
-									if(map[mrd][mcd]==mrc+1) {
-										queue.add(new int[]{mrd,mcd});
-										map[mrd][mcd]=0;
-									}
+								if(map[mrd][mcd]==mrc+1) {
+									queue.add(new int[]{mrd,mcd});
 								}
-								
 							}
 							counter++;
 						}
 						if(counter>=k) {
 							kCount[mrc]++;
-						}	
+						}
+						
 					}
 				}
 			}
@@ -62,7 +59,7 @@ public class Generator2 {
 		for(int find=kCount.length-1; find>=0; find--) {
 			if(kCount[find]>kMax) {
 				kMax=kCount[find];
-				generator=find+1;
+				generator=find-1;
 			}
 		}
 		System.out.println(generator);
