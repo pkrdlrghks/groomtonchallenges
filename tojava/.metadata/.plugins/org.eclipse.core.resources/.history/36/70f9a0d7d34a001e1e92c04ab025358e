@@ -1,0 +1,50 @@
+package groomton;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Union {
+
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		int n=scanner.nextInt();
+		int m=scanner.nextInt();
+		List<Integer> archipelago=new ArrayList<Integer>();
+		for (int i = 1; i <= n; i++) {
+			archipelago.add(i);
+		}
+		Map<Integer, ArrayList<Integer>> bridge=new HashMap<Integer, ArrayList<Integer>>();
+		for(int i=0; i<m; i++) {
+			int s=scanner.nextInt();
+			int e=scanner.nextInt();
+			if(!bridge.containsKey(s)) {
+				bridge.put(s, new ArrayList<Integer>());
+			}
+			bridge.get(s).add(e);
+		}
+		List<int[]> unions=new ArrayList<int[]>();
+		for (int island : archipelago) {
+			Queue<Integer> Squeue=new LinkedList<Integer>();
+			Queue<ArrayList<Integer>> Equeue=new LinkedList<ArrayList<Integer>>();
+			Squeue.add(island);
+			if(archipelago.contains(island)) {
+				Equeue.add(bridge.get(island));
+			}else {
+				Equeue.add(null);
+			}
+			while (!Squeue.isEmpty()) {
+				
+			}
+			
+		}
+		
+		
+
+	}
+
+}

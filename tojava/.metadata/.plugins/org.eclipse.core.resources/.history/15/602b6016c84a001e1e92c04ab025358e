@@ -1,0 +1,20 @@
+package groomton;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Union {
+
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		int n=scanner.nextInt();
+		int m=scanner.nextInt();
+		ArrayList<Integer> island=new ArrayList<Integer>();
+		for (int i = 1; i <= n; i++) {
+			island.add(i);
+		}
+		
+
+	}
+
+}
