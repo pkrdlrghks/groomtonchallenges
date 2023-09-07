@@ -36,7 +36,7 @@ public class NetworkAnalysis {
 		
 		for(int i=1; i<=n; i++) {
 			if(!visited[i]) {
-				Pair pair=bfs(i);
+				Pair pair=bfs(i);3
 				List<Integer> temp=pair.list;
 				double tempDesity=pair.value;
 				
