@@ -1,0 +1,34 @@
+package groomton;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class NetworkAnalysis {
+	public static class network{
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int m=sc.nextInt();
+		sc.nextLine();
+		int[] computers=new int[n+1];
+		Map<Integer, List<Integer>> circuit=new HashMap<>();
+		for(int i=0; i<m; i++) {
+			int a=sc.nextInt();
+			int b=sc.nextInt();
+			if(!circuit.containsKey(a)) {
+				circuit.put(a, new ArrayList<Integer>());
+			}
+			circuit.get(a).add(b);
+		}
+		
+		
+
+	}
+
+}
