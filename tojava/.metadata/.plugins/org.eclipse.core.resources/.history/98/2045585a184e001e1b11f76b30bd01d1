@@ -1,6 +1,6 @@
 package groomton;
 
-public class BuyFruit {
+public class ReplaceRoute {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
